@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Extract Value</title>
+  </head>
+  <body>
+    <form action="test.html">
+      <label for="firstName">First Name</label>
+      <input type="text" name="firstName" value="Hailemedhn" id="firstName" />
+      <br />
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName" value="Tegegne" id="lastName" /> <br />
+    </form>
+    <button id="button">Value</button>
+    <script>
+      let button = document.getElementById("button");
+      button.addEventListener("click", function () {
+        let firstName = document.getElementById("firstName").value;
+        let lastName = document.getElementById("lastName").value;
+        console.log("First Name: ", firstName, " Last Name: ", lastName);
+      });
+    </script>
+  </body>
+</html>

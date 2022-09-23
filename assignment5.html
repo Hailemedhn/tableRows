@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Various Methods</title>
+  </head>
+  <body>
+    <div class="header"></div>
+    <section id="container">
+      <ul>
+        <li class="first">One</li>
+        <li class="second">Two</li>
+        <li class="third">Three</li>
+      </ul>
+      <ol>
+        <li class="first">One</li>
+        <li class="second">Two</li>
+        <li class="third">Three</li>
+      </ol>
+    </section>
+    <div class="footer">footer</div>
+    <script>
+      //selecting the element with id container in two ways
+      let container1 = document.getElementById("container");
+      let container2 = document.querySelector("#container");
+      // selecting all of the list items with a class of second
+      let classSecond = document.getElementsByClassName("second");
+      // selecting ol list item with class third
+      let olThird = document.querySelectorAll("ol .third");
+      // Give the section with id 'container' the text 'Hi from container'
+      let section = document.getElementById("container");
+      let para = document.createElement("p");
+      para.innerHTML = "Hi from Container";
+      section.appendChild(para);
+      const footer = document.getElementsByClassName("footer")[0];
+      footer.classList.add("main");
+      footer.classList.remove("main");
+      //.Create new li element, with class and text 'four' and append it to ul tag
+      const topUl = document.getElementsByTagName("ul")[0];
+      let newLi = document.createElement("li");
+      newLi.innerHTML = "four";
+      newLi.classList.add("four");
+      topUl.appendChild(newLi);
+      //Provide background color to all the li elemenst inside the ol tag
+      const bottomOl = document.getElementsByTagName("ol")[0];
+      for (let i = 0; i < bottomOl.children.length; i++) {
+        bottomOl.children[i].style.backgroundColor = "brown";
+      }
+      // Remove the foooter div
+      footer.remove();
+    </script>
+  </body>
+</html>
